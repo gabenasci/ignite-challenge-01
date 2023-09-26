@@ -4,6 +4,7 @@ import { Task } from './Task'
 import Clipboard  from '../assets/clipboard.svg'
 
 import styles from './TaskList.module.css'
+import { NewTask } from './NewTask'
 
 
 export function TaskList() {
@@ -22,6 +23,11 @@ export function TaskList() {
     },
   ])
 
+  function createTask(content) {
+    const updatedTasks = [...tasks, {content, completed: false}]
+    setTasks(updatedTasks)
+  }
+
   function completeTask(taskToComplete: string) {
     const updatedTasks = tasks.map((task) =>
       task.content === taskToComplete ? { ...task, completed: (!task.completed) } : task
@@ -38,6 +44,7 @@ export function TaskList() {
 
   return (
     <div className={styles.taskList}>
+      <NewTask onCreateTask={createTask} />
       <header>
         <div className={styles.created}>
           <p>Created tasks</p>

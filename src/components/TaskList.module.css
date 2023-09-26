@@ -5,6 +5,7 @@
   align-items: center;
   padding: 4rem 0;
   color: var(--gray-300);
+  margin-top: -6rem;
 }
 
 .taskList header {
