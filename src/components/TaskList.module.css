@@ -1,0 +1,42 @@
+.taskList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.taskList header {
+  width: 46rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.created {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 0.875rem;
+}
+
+.badge {
+  margin-left: 0.5rem;
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.completed {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--purple);
+  font-size: 0.875rem;
+}
