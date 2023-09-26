@@ -28,3 +28,8 @@
 .task button:hover {
   color: var(--danger);
 }
+
+.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}

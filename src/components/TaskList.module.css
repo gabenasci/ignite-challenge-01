@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  color: var(--gray-300);
 }
 
 .taskList header {
@@ -39,4 +40,19 @@
   font-weight: 700;
   color: var(--purple);
   font-size: 0.875rem;
+}
+
+.task h3 {
+  font-weight: 700;
+}
+
+.noTasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.noTasks img {
+  margin-bottom: 1rem;
 }
