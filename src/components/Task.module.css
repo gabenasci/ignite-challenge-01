@@ -1,4 +1,6 @@
 .task {
+  display: flex;
+  justify-content: space-between;
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
   border-radius: 8px;
@@ -6,4 +8,23 @@
   width: 46rem;
   padding: 1rem;
   color: var(--gray-100);
+}
+
+.task span {
+  display: flex;
+  justify-content: flex-start;
+  width: 38rem;
+}
+
+.task button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 2px;
+}
+
+.task button:hover {
+  color: var(--danger);
 }
