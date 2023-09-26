@@ -6,27 +6,30 @@ import CheckedIcon from '../assets/checked.svg'
 
 import styles from './Task.module.css'
 
-interface TaskProps {
+export interface TaskProps {
   content: string
-  onDeleteTask: (content: string) => void;
+  onCompleteTask: (content: string) => void
+  onDeleteTask: (content: string) => void
+  completedProp: boolean
 }
 
-export function Task({ content, onDeleteTask }: TaskProps) {
+export function Task({ content, onCompleteTask, onDeleteTask, completedProp }: TaskProps) {
 
-  const [completed, setCompleted] = useState(false)
+  const [completed, setCompleted] = useState(completedProp)
 
   function handleDeleteTask() {
     onDeleteTask(content)
   }
 
   function handleCheckTask() {
+    onCompleteTask(content)
     setCompleted(!completed)
   }
 
   return (
     <div className={styles.task}>
       { completed ? (<img src={CheckedIcon} onClick={handleCheckTask} />) : (<img src={UncheckedIcon} onClick={handleCheckTask} />) }
-      <span><p>First task</p></span>
+      <span className={completed ? styles.completed : ''}><p>{content}</p></span>
       <button onClick={handleDeleteTask} title="Delete task">
         <Trash size={20} />
       </button>
